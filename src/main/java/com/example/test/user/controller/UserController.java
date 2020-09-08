@@ -3,6 +3,7 @@ package com.example.test.user.controller;
 import com.example.test.user.model.UserService;
 import com.example.test.user.model.req.UserRequest;
 import com.example.test.user.model.res.UserResponse;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -11,9 +12,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
+@RequiredArgsConstructor
 public class UserController {
-    @Autowired
-    private UserService userService;
+    private final UserService userService;
 
     @GetMapping("/")
     public ResponseEntity<List<UserResponse>> get(){
