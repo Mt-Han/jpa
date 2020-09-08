@@ -31,6 +31,7 @@ out/
 /.nb-gradle/
 
 *application.properties
+generated
 
 ### VS Code ###
 .vscode/
